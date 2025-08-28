@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>To Do List</title>
+</head>
+<body>
+<!-- <div id="container">
+<script>
+    let p = document.createElement("p");
+    p.textContent = "Paragraf baru dibuat!";
+    document.getElementById("container").appendChild(p);
+</script> -->
+
+<div id="kontainer">
+    <p id="hapus">Paragraf ini akan dihapus</p>
+</div>
+
+<script>
+    let container = document.getElementById("kontainer");
+    let target = document.getElementById("hapus");
+    container.removeChild(target);
+</script>
+
+</body>
+</html>
