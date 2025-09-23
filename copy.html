@@ -1,0 +1,77 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1><i>METHOD DOM JAVASCRIPT</i></h1>
+
+    <!-- <p><i>penjelasan DOM</i></p>
+    <p id="demo">Halo dunia!</p>
+
+    <p>Paragraf 1</p>
+    <p>Paragraf 2</p>
+
+    <p class="text">Hallo</p>
+    <p class="text">Selamat Datang</p>
+
+    <p class="contoh">Paragraf Pertama</p>
+    <p class="contoh">Paragraf Kedua</p>
+
+    <p class="contoh">Paragraf 1</p>
+    <p class="contoh">Paragraf 2</p>
+
+    <div id="kontainer"></div> -->
+
+    <div id="kontainer">
+        <!-- <p id="demo">Teks Lama</p>
+        <img id="gambar" src=" Bahan Image/OIiP.webp"> -->
+        <input type="text" id="inputTugas" placeholder="Masukkan tugas">
+<button onclick="tambahTugas()">Tambah</button>
+
+<ul id="daftar"></ul>
+    </div>
+
+    <script>
+        // let elemen = document.getElementById("demo");
+        // elemen.style.color = "red";
+
+        // let daftar = document.getElementsByTagName("p");
+        // daftar[2].style.color = "blue";
+
+        // let daftar = document.getElementsByClassName("text");
+        // daftar[1].style.fontWeight = "bold";
+
+        // let elemen = document.querySelector(".contoh");
+        // elemen.style.color = "green";
+
+        // let elemen = document.querySelectorAll(".contoh");
+        // elemen.forEach(e => e.style.color = "purple");
+
+        // let p = document.createElement("paragraf");
+        // p.textContent = "paragraf baru dibuat!";
+        // document.getElementById("kontainer").appendChild(p);
+
+        // // let kontainer = document.getElementById("kontainer");
+        // let target = document.getElementById("hapus");
+        // kontainer.removeChild(target);
+
+            // document.getElementById("demo").innerHTML = "Teks Baru!";
+
+            // document.getElementById("gambar").setAttribute("src", "Bahan Image/images.jpg");
+
+            function tambahTugas() {
+                let input = document.getElementById("inputTugas").value;
+                if (input === "") {
+                    alert("isi tugas dulu!");
+                    return;
+                }
+                let li = document.createElement("li");
+                li.textContent = input;
+                document.getElementById("daftar").appendChild(li);
+                document.getElementById("inputTugas").value = "";
+            }
+        </script>
+</body>
+</html>
