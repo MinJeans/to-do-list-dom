@@ -28,9 +28,11 @@
         <!-- <p id="demo">Teks Lama</p>
         <img id="gambar" src=" Bahan Image/OIiP.webp"> -->
         <input type="text" id="inputTugas" placeholder="Masukkan tugas">
-<button onclick="tambahTugas()">Tambah</button>
+        <button onclick="tambahTugas()">Tambah</button>
 
-<ul id="daftar"></ul>
+        <br><br><button onclick="hapusTugas()">Hapus Tugas Terakhir</button>
+
+      <ul id="daftar"></ul>
     </div>
 
     <script>
@@ -71,7 +73,21 @@
                 li.textContent = input;
                 document.getElementById("daftar").appendChild(li);
                 document.getElementById("inputTugas").value = "";
+
             }
+
+            function hapusTugas() {
+                let daftar = document.getElementById("daftar");
+                if (daftar.lastChild) {
+                    daftar.removeChild(daftar.lastChild);
+                } else {
+                    alert("Tidak ada tugas untuk dihapus!");
+                }
+            }
+
+            let kontainer = document.getElementById("kontainer");
+            let target = document.getElementById("hapus");
+            kontainer.removeChild(target);
         </script>
 </body>
 </html>
